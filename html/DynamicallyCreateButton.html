@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+	function ButtonCount(){
+		var count = prompt('How many button you want to see');
+		if(Number.isInteger(parseInt(count)) == true){
+			for(var i=0; i<count; i++){
+				var btn = document.createElement("button");
+				btn.innerHTML = "My name is Button " + (i+1);
+				btn.addEventListener('click', function(){
+					alert(this.innerHTML);
+				}) 
+				document.body.appendChild(btn);
+			}
+		} else {
+			alert('Please input correct value');
+		}
+	}
+	</script>
+	</head>
+	<body onload="ButtonCount();">
+	</body>
+	</head>
+</html>
