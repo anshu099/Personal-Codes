@@ -1,0 +1,49 @@
+<!--
+	This sample is a simple example for Encapsulation in javascript.
+	It includes demonstation for both public and private variables.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta link="Myself">
+	<title>Encapsulation</title>
+	<script type="text/javascript">
+	function encapsulate(){
+		var privateVar = "Anshu";
+		this.publicVar = "Aditya";
+
+		this.getPrivateVar = function(){
+			return privateVar;
+		}
+
+		this.setPrivateVar = function(newValue){
+			privateVar = newValue;
+		}
+
+		this.getPublicVar = function(){
+			return this.publicVar;
+		}
+
+		this.setPublicVar = function(newValue){
+			this.publicVar = newValue;
+		}
+	}
+
+	var child = new encapsulate();
+	alert(child.getPrivateVar());
+	child.privateVar = "Ramniwas";  //Not able to change private variable outside function scope.
+	alert(child.getPrivateVar());
+	child.setPrivateVar('Agrawal');
+	alert(child.getPrivateVar());
+
+	alert(child.getPublicVar());
+	child.publicVar = "Kishore";  //Able to change public variable outside function scope.
+	alert(child.getPublicVar());
+	child.setPublicVar('Jain');
+	alert(child.getPublicVar());
+	</script>
+	</head>
+	<body>
+	</body>
+</html>
