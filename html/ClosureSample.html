@@ -1,0 +1,29 @@
+<!--
+	This sample is a simple example for closure in javascript.
+	Inner function can access variables from outer function
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta link="Myself">
+	<title>Closure</title>
+	<script type="text/javascript">
+	function Outer(){
+		var firstName = "Anshu";
+		var lastName = "Agrawal";
+
+		function Inner(){
+			var remainingText = "My Name is ";
+			return remainingText + firstName + " " + lastName;
+		}
+
+		return Inner();
+	}
+
+	alert(Outer());
+	</script>
+	</head>
+	<body>
+	</body>
+</html>
