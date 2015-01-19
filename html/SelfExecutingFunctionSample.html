@@ -1,0 +1,29 @@
+<!--
+  This sample is a simple example for self executing anonymous function.
+  Creating a global variable as anshu and passing it to 2nd self executing anonymous function.
+  Assigning property in 1st self executing anonymous function and displaying it in 2nd  self executing anonymous function.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta src="MYSELF">
+  <title>Self Executing Anonymous</title>
+  <script type="text/javascript">
+    (function(){
+
+      anshu = window.anshu || {options: {Hello:"Hi"}};
+
+    })();
+
+    (function(a){
+
+      alert(a.options.Hello);
+
+    })(anshu);
+
+  </script>
+  </head>
+  <body>
+  </body>
+</html>
