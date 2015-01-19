@@ -1,0 +1,29 @@
+<!--
+	This sample is a simple example for creating a login page in HTML5 using forms elements.
+	It also demonstrates Session Storage concept.
+	The user will enter email and password and then click login.
+	Then session will store email and will get displayed in the next page.
+	This is Part-2 of 2 files 
+	Previous file is LoginSession1.html 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta link="http://www.w3schools.com/html/html5_webstorage.asp">
+	<title>Session Storage</title>
+	<script type="text/javascript">
+		function show_data(){
+			if(typeof(Storage) !== "undefined") {
+				document.getElementById("result").innerHTML = sessionStorage.getItem("lastName");
+			} else {
+			    alert('No web Storage Support');
+			}
+		}
+	</script>
+	</head>
+	<body onload="show_data();">
+		<span>Hello</span>
+		<span id="result"></span>
+	</body>
+</html>
