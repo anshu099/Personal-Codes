@@ -1,0 +1,39 @@
+<!--
+	This sample is a simple example for Inheritance in javascript.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta link="http://www.klauskomenda.com/code/javascript-inheritance-by-example/">
+	<title>Inheritance</title>
+	<script type="text/javascript">
+	function Vehicle(hasEngine, hasWheels){
+		this.hasEngine = hasEngine || false;
+		this.hasWheels = hasWheels || false;
+	}
+
+	function Car(make, model, hp){
+		this.make = make;
+		this.model = model;
+		this.hp = hp;
+	}
+
+	Car.prototype = new Vehicle(true, true);
+
+	Car.prototype.displaySpecs = function(){
+		alert(this.make + ", " + this.model + ", " + this.hp + ", " + this.hasEngine + ", " + this.hasWheels);
+	}
+
+	var myAudi =  new Car("Audi", "A4", "1400");
+
+	myAudi.displaySpecs();
+
+	Vehicle.prototype.hasTrunk = true;
+
+	alert(myAudi.hasTrunk);
+	</script>
+	</head>
+	<body>
+	</body>
+</html>
