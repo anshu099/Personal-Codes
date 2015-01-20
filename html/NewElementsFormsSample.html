@@ -1,0 +1,71 @@
+<!--
+	This sample demonstrate the New Element added in HTML5 forms.
+	It includes all the new types of form elements/tags added in HTML5 and their sample code.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta src="http://robertnyman.com/2011/08/16/html5-forms-input-types-attributes-and-new-elements-demos-tips-and-tricks/">
+	<title>Forms New Elements</title>	
+	</head>
+	<style type="text/css">
+	main{
+		-webkit-column-count: 3;
+		height: 250px;
+	}
+	h1{
+		text-align: center;
+	}
+	</style>
+	<body>
+		<h1>HTML5 Forms --> New Elements</h1>
+		<main>
+			<!-- Contains a number of <option> elements with values that can be used as suggestions for other form elements through the usage of the list attribute on them. -->
+			<div>
+				<h3>DataList</h3>
+				<input type="text" name="characters" list="data-list">
+				<datalist id="data-list">
+					<option value="Hugo Reyes">
+					<option value="Jack Shephard">
+					<option value="James 'Sawyer' Ford">
+					<option value="John Locke">
+					<option value="Sayid Jarrah">
+				</datalist>
+			</div>
+
+			<!-- Offers a way to create a public/private key pair where the public key is sent with the form. -->
+			<div>
+				<h3>Keygen</h3>
+				<keygen name="key"></keygen>
+			</div>
+			
+			<!-- The meter element is for displaying values on a bar, where you can custom control min, max and assigned value. You can also specify low, high and optimum to set up different kind of areas of the bar. -->
+			<div>
+				<h3>Meter</h3>
+				<meter min="0" max="10" value="7"></meter>
+			</div>
+
+			<!-- Dedicated to output the result of a calculation in the page, for instance sliding a <input type=”range”> back and forth. -->
+			<div>
+				<h3>Output</h3>
+				<p>If input type="range" and the oninput event on forms are supported in your web browser, slide the range below to see the value in the output element.</p>
+				<form oninput="output.value=parseInt(range.value)">
+					<input type="range" id="range" name="range">
+					<output for="range" id="output"></output>
+				</form>
+			</div>
+
+			<!-- Meant to be used to indicate progress of any kind in a web page, for instance file upload progress. -->
+			<div>
+				<h3>Progress</h3>
+				<progress max="100" value="70">70%</progress>
+			</div>
+
+			<div>
+				<h3>Submit Button</h3>
+				<input type="submit" value="Send">
+			</div>
+		</main>
+	</body>
+</html>

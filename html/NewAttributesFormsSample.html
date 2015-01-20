@@ -1,0 +1,140 @@
+<!--
+	This sample demonstrate the New Attrubutes added in HTML5 forms.
+	It includes all the new types of attributes added in HTML5 and their sample code.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta src="http://robertnyman.com/2011/08/16/html5-forms-input-types-attributes-and-new-elements-demos-tips-and-tricks/">
+	<title>Forms New Attributes Added</title>	
+	</head>
+	<style type="text/css">
+	main{
+		-webkit-column-count: 3;
+		height: 550px;
+	}
+	h1{
+		text-align: center;
+	}
+	</style>
+	<body>
+		<h1>HTML5 Forms --> New Attributes Added</h1>
+		<main>
+			<!-- An option to turn off automatic form completion of values for a field. Possible values are “on” and “off”. -->
+			<div>
+				<h3>Autocomplete</h3>
+				<input type="text" name="autocomplete" autocomplete="off">
+			</div>
+
+			<!-- Whether focus should be set to this field as soon as it has loaded. -->
+			<div>
+				<h3>Autofocus</h3>
+				<input type="text" name="autofocus" autofocus>
+			</div>
+				
+			<!-- For buttons that submit a form (e.g. <input type=”submit”>, <input type=”image”> and <button> elements) to be able to override the action attribute of the form; for instance if different buttons should submit the form to different URLs. No more JavaScript to do this! -->
+			<div>
+				<h3>Formaction</h3>
+				<input type="submit" formaction="http://example.org/save" value="Save">
+			</div>
+
+			<!-- For buttons that submit a form to be able to override the form’s specified encoding -->
+			<div>
+				<h3>Forenctype</h3>
+				<input type="submit" formenctype="application/x-www-form-urlencoded" value="Save with enctype">
+			</div>
+
+			<!-- For buttons that submit a form to be able to override the form’s method attribute, in case a button should change the method. -->
+			<div>
+				<h3>Formmethod</h3>
+				<input type="submit" formmethod="POST" value="Send as POST">
+			</div>
+
+			<!-- Append to a submit button to bypass form validation. -->
+			<div>
+				<h3>Formnovalidate</h3>
+				<p>Does the same thing as if the attribute novalidate had been applied to the <form> element.</p>
+				<input type="submit" formnovalidate value="Don't Validate">
+			</div>
+
+			<!-- For buttons that submit a form to be able to override the form’s target attribute. -->
+			<div>
+				<h3>Formtarget</h3>
+				<input type="submit" formtarget="_blank" value="Post to the new tab/window">
+			</div>
+
+			<!-- To connect with a <datalist> element by its id, to use its <option> elements as suggestions. -->
+			<div>
+				<h3>List</h3>
+				<input type="text" list="data-list" name="characters">
+				<datalist id="data-list">
+					<option value="Hugo Reyes">
+					<option value="Jack Shephard">
+					<option value="James 'Sawyer' Ford">
+					<option value="John Locke">
+					<option value="Sayid Jarrah">
+				</datalist>
+			</div>
+
+			<!-- Maximum value for the value that can be put in. -->
+			<div>
+				<h3>Max (Maximum Value is 15)</h3>
+				<input type="number" max="15">
+			</div>
+
+			<!-- Minimum value for the value that can be put in. -->
+			<div>
+				<h3>Min (Minimum Value is 2)</h3>
+				<input type="number" min="2">
+			</div>
+
+			<!-- Allows for selection of multiple files for <input type=”file”> elements, and for multiple e-mail addresses separated by a comma. -->
+			<div>
+				<h3>Multiple</h3>
+				<input type="file" multiple>
+			</div>
+
+			<!-- If a field should be readonly. -->
+			<div>
+				<h3>Readonly</h3>
+				<input type="text" readonly>
+			</div>
+
+			<!-- For validation purposes, if a field is required or not. -->
+			<div>
+				<h3>Required</h3>
+				<input type="text" name="required" required>
+			</div>
+
+			<!-- Declaring what pattern should be used for validating a field’s value, in the form of a regular expression. -->
+			<div>
+				<h3>Pattern (only allows uppercase letters)</h3>
+				<input type="text" pattern="[A-Z]*">
+			</div>
+
+			<!-- Meant to be able to display a hint to the end user what to input. -->
+			<div>
+				<h3>Placeholder</h3>
+				<input type="text" placeholder="Enter text here" name="placeholder">
+			</div>
+
+			<!-- Lets the web browser know if it should spell check the contents or not. -->
+			<div>
+				<h3>Spellcheck</h3>
+				<input type="text" spellcheck="true">
+			</div>
+
+			<!-- Possibility to control the size of each step for elements that accepts number or date input. -->
+			<div>
+				<h3>Step</h3>
+				<input type="number" step="5">
+			</div>
+
+			<div>
+				<h3>Submit Button</h3>
+				<input type="submit" value="Send">
+			</div>
+		</main>
+	</body>
+</html>
