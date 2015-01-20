@@ -1,0 +1,30 @@
+<!--
+	This sample demonstrate the dynamic creation of datalist tag and filling it with option value.
+	It fetches data from myCities.js files which contains cities list.
+	Input tag gets binded with datalist using list attribute of input versus id attribute of datalist.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta src="https://developer.mozilla.org/en/docs/Web/Guide/HTML/HTML5/HTML5_element_list">
+	<title>Dynamic Datalist Creation Sample</title>
+	<script type="text/javascript" src="../javascript/myCities.js"></script>
+	<script type="text/javascript">
+	function generate(){
+		var dataList = document.createElement("datalist");
+		dataList.id = "browsers";
+		for(var i=0; i<myCities.length; i++){
+			var opt = document.createElement("option");
+			opt.value = myCities[i].city;
+			dataList.appendChild(opt);
+		}
+		document.body.appendChild(dataList);
+	};
+	</script>
+	</head>
+	<body onload="generate();">
+		<div>Choose a City from the list. To see the list hover the input box and click the down arrow button: </div>
+		<input list="browsers" placeholder="Type a City name"/>
+	</body>
+</html>
