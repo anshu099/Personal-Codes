@@ -1,0 +1,43 @@
+<!--
+	This sample is a simple example for foreach loop in javascript.
+	Also it demonstrates how hasOwnProperty API of Object works with Inheritance. 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta link="MYSELF">
+	<title>Key Value For Loop</title>
+	<script type="text/javascript">
+	function Vehicle(hasEngine, hasWheels){
+		this.hasEngine = hasEngine || false;
+		this.hasWheels = hasWheels || false;
+	}
+
+	function Car(make, model, hp){
+		this.make = make;
+		this.model = model;
+		this.hp = hp;
+	}
+
+	Car.prototype = new Vehicle(true, true);
+
+	Car.prototype.displaySpecs = function(){
+		alert(this.make + ", " + this.model + ", " + this.hp + ", " + this.hasEngine + ", " + this.hasWheels);
+	}
+
+	var myAudi =  new Car("Audi", "A4", "1400");
+
+	Vehicle.prototype.hasTrunk = true;
+
+	for(var x in myAudi){
+		alert(x);
+		if(myAudi.hasOwnProperty(x)){
+			alert(myAudi[x]);	
+		}
+	}
+	</script>
+	</head>
+	<body>
+	</body>
+</html>
