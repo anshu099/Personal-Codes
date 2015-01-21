@@ -1,0 +1,132 @@
+/*	
+	This sample is a simple css3 code used for creation of a login page.
+	This file is used by a HTML file which is present inside html folder named as LoginPageSample.html. 
+	This file also uses images present inside images folder
+*/
+*{
+	padding: 0;
+	margin: 0;
+	color: white;
+}
+
+#clear{
+	clear: both;
+}
+
+#wrapper{
+	border: 1px solid #2B2B2B;
+	background-color: #2B2B2B;
+}
+
+#info{
+	font-family: verdana;
+	text-align: center;
+	padding-top: 70px;
+	font-size: 30px;
+}
+
+#form-wrapper{
+	width: 385px;
+	margin: 100px auto;
+	background-color: #000000;
+}
+
+#form-header{
+	padding: 10px 0 10px 0;
+	border-left: 20px solid #B80000;
+}
+
+#form-header h1{
+	padding-left: 10px;
+	font-size: 40px;
+	font-family: impact;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+#person{
+	background: url(../images/user911.png) no-repeat;
+	background-color: #2B2B2B;
+	background-size: 16px 16px;
+	background-position: center;
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+}
+
+#key{
+	background: url(../images/key.png) no-repeat;
+	background-color: #2B2B2B;
+	background-size: 25px 25px;
+	background-position: center;
+	display: block;
+	width: 16px;
+	height: 16px;
+	margin-top: 2px;
+}
+
+.input-controls{
+	width: 340px;
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.input-controls input{
+	font-family: arial;
+	text-transform: lowercase;
+	font-size: 17px;
+	width: 90%;
+	z-index: 1;
+	float: left;
+	padding: 15px;
+	background-color: #2B2B2B;
+	border: none;
+
+}
+
+.input-controls span{
+	float: left;
+	z-index: 10;
+	margin-left: -50px;
+	padding: 15px;
+}
+
+#login-btn{
+	width: 100%;
+	padding: 10px;
+	background-color: #B80000;
+	border: 1px outset #A30000;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: impact;
+}
+
+#login-btn:hover{
+	background-color: #A30000;
+}
+
+#login-btn:active{
+	background-color: #A30000;
+	border: 1px inset #A30000;
+}
+
+#form-footer{
+	font-family: arial;
+	padding: 30px 0 40px 25px;
+}
+
+#forgot{
+	text-decoration: none;
+}
+
+#create{
+	text-decoration: none;
+	color: #CC0000;
+	margin-left: 50px;
+}
+
+#forgot:hover,
+#create:hover{
+	text-decoration: underline;
+}
