@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>AJAX : Example 4 - AJAX &amp; XML</title>
+<style type="text/css">
+body {font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#333;}
+#txtHint {padding-left:20px; color:#666;}
+.suggestions {color:#00f;}
+</style>
+<script type="text/javascript" src="select.js"></script>
+</head>
+
+<body>
+<h1>Example 4: AJAX &amp; XML</h1>
+<form> 
+Select MJ's album:
+<select name="album" onchange="showAlbum(this.value)">
+<option value="Thriller">Thriller</option>
+<option value="Dangerous">Dangerous</option>
+<option value="History">HIStory</option> 
+</select>
+</form>
+<p><div id="txtHint">Album info will be listed here.</div></p>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Web worker example</title>
+<script>
+// initialize Worker thread:
+var worker = new Worker('bigLoop.js');
+
+// get the message from the worker
+worker.onmessage = function (event) {
+	alert("Completed " + event.data + "iterations" );
+};
+
+// see if there was an error
+worker.onerror = function (event) {
+	console.log(event.message, event);
+};
+
+// sayHello() will work even when 
+// worker is still executing
+function sayHello(){
+	alert("Hello world!!" );
+}
+</script>
+</head>
+<body>
+<input type="button" onclick="sayHello();" value="Say Hello"/>
+</body>
+</html>

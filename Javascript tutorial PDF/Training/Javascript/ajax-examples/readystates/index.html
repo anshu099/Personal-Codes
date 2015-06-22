@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>ajax</title>
+<script type="text/javascript" src="xmlobj.js"></script>
+<script type="text/javascript">
+function AjaxFunction() {
+	var f1 = document.getElementById("f1").value;
+	var f2 = document.getElementById("f2").value;
+	var params = "f1=" + f1 + "&f2=" + f2;
+
+	var xmlHttp = new GetXmlHttpObject();
+	xmlHttp.open("POST", "response.asp", true);
+	xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlHttp.setRequestHeader("Content-length", params.length);
+	xmlHttp.setRequestHeader("Connection", "close");
+	xmlHttp.send(params);
+
+	xmlHttp.onreadystatechange = function() {
+		if(xmlHttp.readyState == 0) {
+			document.getElementById("response").innerHTML = "Loading0...";
+		}
+		if(xmlHttp.readyState == 1) {
+			document.getElementById("response").innerHTML = "Loading1...";
+		}
+		if(xmlHttp.readyState == 2) {
+			document.getElementById("response").innerHTML = "Loading2...";
+		}
+		if(xmlHttp.readyState == 3) {
+			document.getElementById("response").innerHTML = "Loading3...";
+		}
+		/*if(xmlHttp.readyState == 4) {
+			document.getElementById("response").innerHTML = xmlHttp.responseText;
+		}*/
+	}
+	
+}
+</script>
+</head>
+
+<body>
+<form>
+<input type="text" id="f1" />
+<input type="text" id="f2" />
+<div id="response"></div>
+<button onclick="AjaxFunction()">click</button>
+</form>
+</body>
+</html>

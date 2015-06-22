@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Array</title>
+<script type="text/javascript">
+
+var wCarnivorous = ["tiger", "leopard"];
+var wHerbivorous = ["deer", "bison", "rabbit"];
+var wild = ["fox", wCarnivorous, wHerbivorous];
+
+var dCarnivorous = ["dog", "cat"];
+var dHerbivorous = ["cow", "buffalo", "horse"];
+var domestic = [dCarnivorous, dHerbivorous];
+
+var animals = [wild, domestic];
+
+//document.write(animals.length);
+//document.write(animals[1].length);
+document.write(animals);
+/*
+for(i=0; i<animals.length; i++) {
+	if(animals[i].length <= 1) {
+		document.write('printing here: ' + animals[i] + '<br />');
+	}
+	else {
+		for(j=0; j<animals[i][j].length; j++){
+			document.write('printin in 2nd for: ' + animals[i][j] + '<br />');
+		}// end inner for
+	} // end if...else
+} // end outer for
+*/
+</script>
+</head>
+
+<body>
+</body>
+</html>

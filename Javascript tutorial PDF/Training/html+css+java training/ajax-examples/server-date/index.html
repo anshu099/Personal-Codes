@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>AJAX : Example 1</title>
+<style type="text/css">
+body {font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#333;}
+</style>
+<script type="text/javascript">
+function GetXmlHttpObject() {
+	var xmlHttp;
+	
+	try {
+		xmlHttp = new XMLHttpRequest(); // for ff, safari, ...
+	}
+	catch (e) {
+		try {
+			xmlHttp = new ActiveXObject("Msxml2.XMLHTTP"); // IE6+
+		}
+		catch (e) {
+			try {
+				xmlHttp = new ActiveXObject("Microsoft.XMLHTTP"); // IE5.5+
+			}
+			catch (e) {
+				alert("Your browser does not support AJAX.");
+				return false;
+			}
+		}
+	} // try
+	
+	return xmlHttp;
+}// GetXmlHttpObject
+
+function ajaxFunction() {
+	
+	var xmlHttp = GetXmlHttpObject();
+	xmlHttp.onreadystatechange = function() {
+		if(xmlHttp.readyState == 4)
+		{
+			document.form1.servertime.value = xmlHttp.responseText;
+		}
+	} // onreadystatechange
+	
+	xmlHttp.open("GET", "server-date.asp", true);
+	xmlHttp.send(null);
+} // end ajaxFunction
+</script>
+</head>
+
+<body>
+<h1>AJAX Example 1</h1>
+<form id="form1" name="form1" method="post" action="">
+  <label>Name:
+  <input name="name" type="text" id="name" onkeyup="ajaxFunction();" />
+  </label>
+  <label>Date:
+  <input name="servertime" type="text" id="servertime" />
+  </label>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

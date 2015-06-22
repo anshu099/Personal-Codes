@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Objects - Example</title>
+<script type="text/javascript">
+/*
+var GUITAR = { }; // creates an empty object
+GUITAR.color = 'black'; // add properties
+GUITAR.strings = ['E', 'A', 'D', 'G', 'B', 'e'];
+GUITAR.tune = function (newStrings) {
+       this.strings = newStrings;
+};
+GUITAR.play = function (chord) {
+       alert('Playing chord: ' + chord);
+};
+GUITAR.print = function (price, currency) {
+       alert('This guitar is ' + this.color +
+               ', it has ' + this.strings.length + ' strings' +
+               ' and it costs ' + price + currency);
+};
+
+//using the object
+GUITAR.play('Dm7');
+GUITAR.tune( ['D', 'A', 'D', 'G', 'B', 'e' ] );
+console.log('this guitar is: ' + GUITAR.color);
+GUITAR.print(850, ' Rs. ');
+*/
+
+var GUITAR = {
+       color: 'black',
+       strings: ['E', 'A', 'D', 'G', 'B', 'e'],
+       tune: function (newStrings) {
+               this.strings = newStrings;
+       },
+       play: function (chord) {
+               alert('Playing chord: ' + chord);
+       },
+       print: function (price, currency) {
+               alert('This guitar is ' + this.color + ', it has ' + this.strings.length + ' strings' +
+               ' and it costs ' + price + currency);
+       }
+};
+//using the object
+GUITAR.play('Dm7');
+GUITAR.tune( ['D', 'A', 'D', 'G', 'B', 'e' ] );
+console.log('this guitar is: ' + GUITAR.color);
+GUITAR.print(850, 'Rs. ');
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

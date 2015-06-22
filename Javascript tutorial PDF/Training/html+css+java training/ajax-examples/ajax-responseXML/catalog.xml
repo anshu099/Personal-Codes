@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<CATALOG> 
+<ALBUM> 
+<TITLE>Thriller</TITLE> 
+<YEAR>1982</YEAR> 
+<PRICE>23.90</PRICE> 
+</ALBUM>
+<ALBUM> 
+<TITLE>Dangerous</TITLE> 
+<YEAR>1991</YEAR> 
+<PRICE>29.90</PRICE> 
+</ALBUM>
+<ALBUM> 
+<TITLE>History</TITLE> 
+<YEAR>1995</YEAR> 
+<PRICE>19.90</PRICE> 
+</ALBUM>
+</CATALOG>

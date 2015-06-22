@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Objects - inheritance</title>
+<script type="text/javascript">
+var Person = function(name) {
+	this.name = name;
+}
+Person.prototype.greet = function(){
+	alert("Hello! My name is " + this.name + ".");
+}
+
+var Employee = function(name, company, title){
+	this.name = name;
+	this.company = company;
+	this.title = title;
+	this.desig = function(){
+		alert("My desig is " + this.title + ".");
+	}
+}
+Employee.prototype = new Person();
+Employee.prototype.constructor = Employee;
+
+var ContractEmp = function(name, company, title, type){
+	this.name = name;
+	this.company = company;
+	this.title = title;
+	this.type = type;
+}
+ContractEmp.prototype = new Employee();
+ContractEmp.prototype.constructor = ContractEmp;
+
+var e = new Employee("Steve Jobs", "Apple", "CEO", "temp");
+e.greet();
+</script>
+</head>
+
+<body>
+</body>
+</html>

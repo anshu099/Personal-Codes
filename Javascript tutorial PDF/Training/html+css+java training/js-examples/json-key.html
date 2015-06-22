@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Array</title>
+<script type="text/javascript">
+
+var States = {AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', 
+              CA: 'California', CO: 'Colorado', CT: 'Connecticut', 
+              DE: 'Delaware', DC: 'District of Columbia', FL: 'Florida', 
+              GA: 'Georgia', HI: 'Hawaii', ID: 'Idaho', IL: 'Illinois', 
+              IN: 'Indiana', IA: 'Iowa', KS: 'Kansas', KY: 'Kentucky', 
+              LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', 
+              MI: 'Michigan', MN: 'Minnesota', MO: 'Missouri', MT: 'Montana', 
+              NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', 
+              NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', 
+              NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio', 
+              OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', 
+              RI: 'Rhode Island', SC: 'South Carolina', 
+              SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', 
+              VT: 'Vermont', VA: 'Virginia', WA: 'Washington', 
+              WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming'};
+
+
+function switcharoo(o) {
+    var t = {};
+    for (var i in o) {
+        if(o.hasOwnProperty(i)){
+            t[o[i]] = i ;
+        }
+    }
+    return t;
+}
+myData = JSON.parse(States, function(key, value){
+	document.write(key + '<br />');
+});
+/*
+var rstates = switcharoo(States);
+document.write(rstates.length);
+console.log(rstates);
+*/
+</script>
+</head>
+
+<body>
+</body>
+</html>

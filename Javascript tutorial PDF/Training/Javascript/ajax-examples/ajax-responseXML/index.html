@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>AJAX : Example 5 - responseXML</title>
+<style type="text/css">
+body {font-family:'Trebuchet MS', Arial, Helvetica, sans-serif; color:#333;}
+#txtHint {padding-left:20px; color:#666;}
+.suggestions {color:#00f;}
+</style>
+<script type="text/javascript" src="select_xml.js"></script>
+</head>
+
+<body>
+<h1>Example 5: responseXML</h1>
+<form> 
+Select a customer:
+<select name="customer" onchange="showDetails(this.value)">
+<option value="keerthi">Keerthi</option>
+<option value="rahul">Rahul</option>
+<option value="siddharth">Siddharth</option> 
+</select>
+</form>
+<strong><span id="age"></span></strong><br />
+<span id="city"></span><br />
+<span id="value"></span>
+</body>
+</html>

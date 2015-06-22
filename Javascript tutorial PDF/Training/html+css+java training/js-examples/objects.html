@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Objects</title>
+<script type="text/javascript">
+var book = {}; // creates an empty object
+var book = {
+	title: 'Immortals of Meluha',
+	price: 240,
+}
+// all of these are same
+var val = {value: 100};
+var val = {"value": 100};
+var val = {'value': 100};
+
+// objects with properties & methods
+var dog = {
+	name: 'snowy',
+	talk: function(){
+		alert('woof, woof!');
+	}
+};
+//document.write(dog.name); // snowy
+//dog.talk(); // alerts woof, woof!
+
+document.write(dog['name']); // note the quotes
+dog['talk']();
+
+</script>
+</head>
+
+<body>
+</body>
+</html>
