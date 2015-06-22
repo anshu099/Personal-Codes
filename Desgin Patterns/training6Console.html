@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TESTING</title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript">
+			EventManager = (function(){	// Business Object & Factory Method
+				var instance;
+				function init(){
+					var topics = {};
+					return {
+						subscribe :  function(topic, fn){
+							if(topics[topic] == null)
+								topics[topic] = fn;
+						},
+
+						publish : function(){
+						},
+
+						unsubscribe : function(){
+						}
+					}
+				}
+				return {
+					getInstance: function(){	//Singleton Object
+						if(!instance)
+							instance = init();
+						return instance;
+					}
+				}
+			})();
+
+
+			var library = Library.getInstance()
+			library.add(new Book(1234, "R.D Sharma", 125));
+			library.add(new Book(123456, "R Sharma", 155));
+			library.list().each(function(item){
+				console.log("The title of the book is: " +item.getTitle());
+			});
+			console.log(library.search(1234).getTitle());
+
+
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>

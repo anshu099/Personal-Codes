@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TESTING</title>
+        <style type="text/css">
+        </style>
+        <script type="text/javascript">
+
+            function Person(){
+            }
+
+            Person.getCount = (function(){
+                var count = 0;
+                return function(){
+                    return ++count;
+                };
+            })();
+
+            console.log(Person.getCount());
+            console.log(Person.getCount());
+
+
+
+            var Guard = (function(){
+                var counter =0;
+
+                return {
+                    name: function(){
+                        console.log("hiii");
+                    }
+                }
+            })();
+
+            Guard.name();
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>

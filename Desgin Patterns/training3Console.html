@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>TESTING</title>
+		<style type="text/css">
+		</style>
+		<script type="text/javascript">
+			function Book(isdnPar1, titlePar2, pricePar3){
+				this.getIsdn = function(){
+					return isdnPar1;
+				}
+				this.getTitle = function(){
+					return titlePar2;
+				}
+				this.getPrice = function(){
+					return pricePar3;
+				}
+			}
+
+			LibraryFactory = {}
+
+			LibraryFactory.get = function(){	//Factory Design Patterns
+				return new Library();
+			}
+
+			function Library(){
+				var Books = [];
+				this.search =  function(isdn){
+					for(var i=0; i<Books.length; i++){
+						if(Books[i].getIsdn() == isdn){
+							return Books[i];
+						}
+					}
+					return "No Book Found";
+				}
+
+				this.add = function(Book){
+					Books.push(Book);
+				}
+
+				this.list = function(){
+					return Books;
+				}
+			}
+
+			var Book1 = new Book(1234, "R.D Sharma", 125);
+			var Book2 = new Book(123456, "R Sharma", 155);
+			var lib = LibraryFactory.get();
+			lib.add(Book1);
+			console.log(lib.list());
+			lib.add(Book2);
+			console.log(lib.list());
+			console.log(lib.search(1234).getTitle());
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
