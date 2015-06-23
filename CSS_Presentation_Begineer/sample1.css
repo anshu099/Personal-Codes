@@ -1,0 +1,23 @@
+div {
+    font-family: Tahoma;
+    color: white;
+    background: green;
+    margin: 8px;
+    text-align: center;
+}
+
+#demo1 {
+    font-family: Arial;
+    color: white;
+    background: red;
+    margin: 8px;
+    text-align: center;
+}
+
+.demo2 {
+    font-family: sans-serif;
+    color: white;
+    background: blue;
+    margin: 8px;
+    text-align: center;
+}

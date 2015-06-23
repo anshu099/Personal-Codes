@@ -1,0 +1,23 @@
+span,p,h3  {
+    font-family: Tahoma;
+    color: white;
+    background: green;
+    margin: 8px;
+    text-align: center;
+}
+
+#demo1 #demo4 {
+    font-family: Arial;
+    color: white;
+    background: red;
+    margin: 8px;
+    text-align: center;
+}
+
+.demo5>.demo6 {
+    font-family: sans-serif;
+    color: white;
+    background: blue;
+    margin: 8px;
+    text-align: center;
+}

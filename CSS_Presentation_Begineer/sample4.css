@@ -1,0 +1,32 @@
+#Example_A {
+border:5px solid blue;
+background-color:orange;
+width: 144px;
+height: 144px;
+border-radius: 20px;
+box-shadow:rgba(0,0,0,0.4) 10px 10px;
+}
+#Example_B {
+border:5px solid blue;
+background-color:orange;
+width: 144px;
+height: 144px;
+border-radius: 20px;
+box-shadow:rgba(0,0,0,0.4) 10px 10px  inset;
+}
+#Example_C {
+border:5px solid blue;
+background-color:orange;
+width: 144px;
+height: 144px;
+border-radius: 20px;
+box-shadow:rgba(0,0,0,0.4) 10px 10px 0 10px /* spread */
+}
+#Example_D {
+border:5px solid blue;
+background-color:orange;
+width: 144px;
+height: 144px;
+border-radius: 20px;
+box-shadow:rgba(0,0,0,0.4) 10px 10px 0  10px /* spread */ inset
+}

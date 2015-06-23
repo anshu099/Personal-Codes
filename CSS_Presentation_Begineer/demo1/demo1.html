@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+        <title>Demo 1</title>
+        <script src="jquery-1.8.3.js"></script>
+        <script type="text/javascript">
+        
+         var xAngle = 0, yAngle = 0;
+        document.addEventListener('keydown', function(e)
+        {
+                switch(e.keyCode)
+                {
+
+                        case 37: // left
+                                yAngle -= 90;
+                                break;
+
+                        case 38: // up
+                                xAngle += 90;
+                                break;
+
+                        case 39: // right
+                                yAngle += 90;
+                                break;
+
+                        case 40: // down
+                                xAngle -= 90;
+                                break;
+                };
+
+                $('#cube').css("webkitTransform" , "rotateX("+xAngle+"deg) rotateY("+yAngle+"deg)");
+        }, false);
+        </script>
+		<link rel="stylesheet" href="demo1.css" />        
+	</head>	
+	<body>
+        <h1>Demo 1</h1>       
+        
+        <div id="experiment">
+            <div id="cube">
+                    <div class="face one">
+                            First Face
+                    </div>
+                    <div class="face two">
+                            Second Face
+                    </div>
+                    <div class="face three">
+                            Third Face
+                    </div>
+                    <div class="face four">
+                            Fourth Face
+                    </div>
+                    <div class="face five">
+                            Fifth Face
+                    </div>
+                    <div class="face six">
+                            Sixth Face
+                    </div>
+            </div>
+        </div>
+        
+	</body>
+</html>

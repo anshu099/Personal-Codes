@@ -1,0 +1,36 @@
+#Example_A {
+height: 65px;
+width:160px;
+background:brown;
+border-bottom-right-radius: 50px;
+}
+#Example_B {
+height: 65px;
+width:160px;
+background:brown;
+border-bottom-left-radius: 50px;
+}
+#Example_C {
+height: 65px;
+width:160px;
+background:brown;
+border-top-right-radius: 25px;
+}
+#Example_D {
+height: 5em;
+width: 12em;
+background:brown;
+border-top-left-radius: 50px;
+}
+#Example_E {
+height: 65px;
+width:160px;
+background:brown;
+border-radius: 25px 10px 10px 25px;
+}
+#Example_F {
+height: 70px;
+width: 70px;
+background:brown;
+border-radius: 35px;
+}
