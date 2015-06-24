@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dialog Box</title>
+<link href="css/ui-lightness/jquery-ui-1.8.4.custom.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  
+  <script>
+  $(document).ready(function() {
+    $("#dialog").dialog({
+		modal: true,
+		buttons: {
+			'Continue': function() {
+				// your continue function here
+				$(this).dialog("close");
+			},
+			'Cancel': function() {
+				$(this).dialog("close");
+			}
+		}
+	});
+  });
+  </script>
+</head>
+<body style="font-size:62.5%;">
+  
+<div id="dialog" title="Dialog Title"><p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p></div>
+<p>
+Sed a odio ut libero viverra euismod. Proin viverra egestas ligula non tincidunt. In hac habitasse platea dictumst. Nam condimentum nunc vel justo tristique ultricies. Integer imperdiet accumsan erat, <a href="http://example.com">id semper nunc convallis</a> in. Morbi id hendrerit augue. In hac habitasse platea dictumst. Morbi lacinia consequat accumsan. Suspendisse potenti. Maecenas semper metus non diam suscipit at rutrum purus interdum. Nunc accumsan felis vitae risus bibendum gravida. Proin dignissim rhoncus rutrum. Pellentesque venenatis rhoncus elit, sit amet eleifend elit placerat at. Vestibulum vulputate volutpat felis sit amet tincidunt. Donec eget justo ut urna egestas tincidunt. In lacus sapien, scelerisque eget dignissim et, condimentum vitae lectus. Proin molestie nisl tortor. Maecenas molestie scelerisque molestie. Ut faucibus consequat porttitor. 
+</p>
+
+</body>
+</html>

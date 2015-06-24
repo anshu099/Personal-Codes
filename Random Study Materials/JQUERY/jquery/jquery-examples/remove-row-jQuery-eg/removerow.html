@@ -1,0 +1,31 @@
+<html>
+<head>
+<title> Removing Rows </title>
+<script type="text/javascript" src="jquery-1.3.2.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$("#sample tr").click(function() {
+		//change the background color to red before removing
+		$(this).css("background-color","#FF3700");
+
+		$(this).fadeOut(400, function(){
+			$(this).remove();
+		});
+	});
+});
+</script>
+<head>
+<body>
+<table border="1" id="sample">
+<tr>
+<td style="padding:10px">1</td>
+<td>Name 1: Sridhar</td>
+</tr>
+<tr>
+<td style="padding:10px">2</td>
+<td>Name 2: Sachin</td>
+</tr>
+</table> 
+</body>
+
+

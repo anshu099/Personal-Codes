@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>jQuery - Flot</title>
+<script type="text/javascript" src="jquery-1.7.1.js"></script>
+<!--[if lte IE8]>
+<script type="text/javascript" src="flot/excanvas.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="flot/jquery.flot.min.js"></script>
+<script language="javascript" type="text/javascript" src="flot/jquery.flot.pie.js"></script>
+</head>
+<script type="text/javascript">
+$(document).ready(function(){
+	// data
+	var data = [
+		{ label: "Series1",  data: 10},
+		{ label: "Series2",  data: 30},
+		{ label: "Series3",  data: 90},
+		{ label: "Series4",  data: 70},
+		{ label: "Series5",  data: 80},
+		{ label: "Series6",  data: 110}
+	];
+	
+	// set options, with series: pie property
+	var options = {
+		series: {
+			pie: {
+				show: true,
+				label: {show:true}
+			}
+		}
+	};
+	
+	var plotarea = $("#placeholder");
+	$.plot(plotarea, data, options);
+});
+</script>
+</head>
+
+<body>
+<div id="main">
+<div id="placeholder" style="width:500px; height:300px;"></div>
+</div>
+</body>
+</html>

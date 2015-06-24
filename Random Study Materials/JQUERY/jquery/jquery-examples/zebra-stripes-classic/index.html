@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Zebra Striped Tables</title>
+<script type="text/javascript" src="../forms/lib/js/jquery-1.4.2.min.js"></script>
+<style type="text/css">
+body {font:14px/20px "Calibri", Arial, Helvetica, sans-serif; padding:0; margin:0;}
+.striped {background-color:coral; border:1px solid #ccc;}
+td {border:1px solid #ccc;}
+</style>
+<script type="text/javascript">
+/*
+var stripe = function() {
+  var tables = document.getElementsByTagName("table");  
+
+  for(var x=0;x!=tables.length;x++){
+    var table = tables[x];
+    if (! table) { return; }
+    var tbodies = table.getElementsByTagName("tbody");
+    
+    for (var h = 0; h < tbodies.length; h++) {
+      var even = true;
+      var trs = tbodies[h].getElementsByTagName("tr");
+      
+      for (var i = 0; i < trs.length; i++) {
+        trs[i].onmouseover=function(){
+          this.className += " ruled"; return false
+        }
+        trs[i].onmouseout=function(){
+          this.className = this.className.replace("ruled", ""); return false
+        }
+        
+        if(even)
+          trs[i].className += " even";
+        
+        even = !even;
+      }
+    }
+  }
+}
+
+window.onload = stripe;
+*/
+
+$(document).ready(function(){
+	$("tr:even").css('background-color','coral');
+});
+</script>
+
+
+</head>
+<body>
+<div id="bottle">
+<table id="playlist" cellspacing="0" cellpadding="3">
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Lost In The Plot</td>
+			<td>The Dears</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Poison</td>
+			<td>The Constantines</td>
+
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Plea From A Cat Named Virtute</td>
+			<td>The Weakerthans</td>
+		</tr>
+		<tr>
+
+			<td>4</td>
+			<td>Melissa Louise</td>
+			<td>Chixdiggit!</td>
+		</tr>
+	</tbody>
+	<tbody>		
+		<tr>
+			<td>5</td>
+
+			<td>Living Room</td>
+			<td>Tegan And Sara</td>
+
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>Speed</td>
+
+			<td>Bran Van 3000</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Fast Money Blessing</td>
+			<td>King Cobb Steelie</td>
+		</tr>
+
+	</tbody>
+	<tbody>
+		<tr>
+			<td>8</td>
+			<td>Sore</td>
+			<td>Buck 65</td>
+		</tr>
+
+		<tr>
+			<td>9</td>
+			<td>Love Travel</td>
+			<td>Danko Jones</td>
+		</tr>
+		<tr>
+			<td>10</td>
+
+			<td>You Never Let Me Down</td>
+			<td>Furnaceface</td>
+		</tr>	
+	</tbody>
+	
+</table>
+
+</div>
+</body>
+</html>

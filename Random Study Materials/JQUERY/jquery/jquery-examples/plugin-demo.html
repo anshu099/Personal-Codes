@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>jQuery - Custom Plugin</title>
+<link href="lib/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="lib/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+(function($){
+	$.fn.extend({
+		// plugin name
+		bgHover: function(options){
+			var defaults = {
+				backgroundColor: '#ccc',
+				fontColor: '#00f'
+			}; // defaults
+			
+			var options = $.extend(defaults, options);
+			
+			return this.each(function(){
+				var o = options;
+				var obj = $(this);
+				var defaultBgColor = $(this).css('background-color');
+				var defaultFontColor = $(this).css('color');
+				
+				obj.mouseover(function(){
+					$(this).css({'background-color': o.backgroundColor, 'color': o.fontColor});
+				}).mouseout(function(){
+					$(this).css({'background-color': defaultBgColor, 'color' : defaultFontColor});
+				});
+			}); // return
+		} //bgHover
+	}); // extend
+
+})(jQuery);
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("li").bgHover({'backgroundColor':'#800080', 'fontColor':'#fff'});
+/*
+	$("li").mouseover(function(){
+		$(this).css('background-color', '#ccc');
+	}).mouseout(function(){
+		$(this).css('background-color', '#fff');
+	});
+*/
+});
+</script>
+<style type="text/css">
+div#output ul li {padding:8px; line-height:28px; font-size:1.4em;}
+</style>
+</head>
+
+<body>
+<div id="main">
+<h1>jQuery Custom Plugin Demo</h1>
+<hr />
+<div id="output">
+  <ul style="font-weight:bold;">
+    <li>jQuery</li>
+    <li>Dojo</li>
+    <li>ExtJs</li>
+    <li>Scriptaculous</li>
+  </ul>
+</div>
+</div>
+</body>
+</html>

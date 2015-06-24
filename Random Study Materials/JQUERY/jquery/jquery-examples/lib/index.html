@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>jQuery UI Example Page</title>
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.4.custom.css" rel="stylesheet" />	
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.4.custom.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	// Accordion
+	$("#accordion").accordion({ header: "h3" });
+
+	// Tabs
+	$('#tabs').tabs();
+
+	// Dialog Link
+	$('#dialog_link').click(function(){
+		// Dialog			
+		$("#dialog").dialog({
+			modal: true,
+			buttons: {
+				'Continue': function() {
+					// your continue function here
+					$(this).dialog("close");
+				},
+				'Cancel': function() {
+					$(this).dialog("close");
+				}
+			}
+		});
+		return false;
+	});
+
+	// Datepicker
+	$('#datepicker').datepicker({
+		inline: true
+	});
+	
+	// Slider
+	$('#slider').slider({
+		range: true,
+		values: [17, 67]
+	});
+	
+	// Progressbar
+	$("#progressbar").progressbar({
+		value: 20 
+	});
+	
+	//hover states on the static widgets
+	$('#dialog_link, ul#icons li').hover(
+		function() { $(this).addClass('ui-state-hover'); }, 
+		function() { $(this).removeClass('ui-state-hover'); }
+	);
+	
+});
+</script>
+<style type="text/css">
+	/*demo page css*/
+	body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 50px;}
+	#main {width:1000px; margin:0 auto;}
+	.demoHeaders { margin-top: 2em; }
+	#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+	#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+	ul#icons {margin: 0; padding: 0;}
+	ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+	ul#icons span.ui-icon {float: left; margin: 0 4px;}
+</style>	
+</head>
+	<body>
+	<div id="main">
+	<h1>Welcome to jQuery UI!</h1>
+		
+		<!-- Accordion -->
+		<h2 class="demoHeaders">Accordion</h2>
+		<div id="accordion">
+			<div>
+				<h3><a href="#">First</a></h3>
+				<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique sagittis volutpat. Quisque mauris erat, semper non dapibus id, ullamcorper eu nunc. Pellentesque quis elementum sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas mattis blandit ornare. In hac habitasse platea dictumst. Nullam sed tristique risus. Nulla facilisi. Sed gravida augue vel sem fringilla venenatis. Fusce a mattis eros. Sed sodales arcu vel mauris volutpat auctor. Morbi fermentum, enim a pellentesque vulputate, odio justo accumsan tellus, nec egestas diam diam id nibh. Duis eros metus, facilisis id tincidunt condimentum, elementum at elit. Mauris tincidunt ultricies turpis, in fermentum ante sollicitudin at. Aenean feugiat aliquam risus, at varius erat vehicula eget. Sed rhoncus congue pulvinar. Sed justo augue, cursus eu adipiscing lobortis, faucibus venenatis magna. Aliquam erat volutpat.</p>
+
+<p>Nunc lacinia, eros non rutrum volutpat, ligula arcu venenatis mi, at tempus urna dui eget augue. Suspendisse suscipit, nisi in sollicitudin viverra, lorem ligula tempus ante, sit amet ultrices leo turpis vitae nisl. Donec pretium sodales tristique. Nullam molestie consequat lorem, ut sollicitudin odio viverra ut. Duis consectetur malesuada odio, a venenatis nulla varius nec. Donec interdum ante non velit semper ultrices. Nunc dui risus, euismod in pulvinar et, porttitor consectetur sem. Nam imperdiet diam rhoncus augue elementum sit amet vehicula nibh euismod. Morbi pretium est et tellus varius imperdiet. Nunc adipiscing interdum mollis. Phasellus id urna odio, iaculis vestibulum tortor. Integer pharetra sem sit amet erat posuere tincidunt quis id nulla. Aliquam feugiat lectus iaculis lorem blandit dapibus. Ut vel leo quis sem porta vestibulum. </p></div>
+			</div>
+			<div>
+				<h3><a href="#">Second</a></h3>
+				<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique sagittis volutpat. Quisque mauris erat, semper non dapibus id, ullamcorper eu nunc. Pellentesque quis elementum sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas mattis blandit ornare. In hac habitasse platea dictumst. Nullam sed tristique risus. Nulla facilisi. Sed gravida augue vel sem fringilla venenatis. Fusce a mattis eros. Sed sodales arcu vel mauris volutpat auctor. Morbi fermentum, enim a pellentesque vulputate, odio justo accumsan tellus, nec egestas diam diam id nibh. Duis eros metus, facilisis id tincidunt condimentum, elementum at elit. Mauris tincidunt ultricies turpis, in fermentum ante sollicitudin at. Aenean feugiat aliquam risus, at varius erat vehicula eget. Sed rhoncus congue pulvinar. Sed justo augue, cursus eu adipiscing lobortis, faucibus venenatis magna. Aliquam erat volutpat.</p>
+
+<p>Nunc lacinia, eros non rutrum volutpat, ligula arcu venenatis mi, at tempus urna dui eget augue. Suspendisse suscipit, nisi in sollicitudin viverra, lorem ligula tempus ante, sit amet ultrices leo turpis vitae nisl. Donec pretium sodales tristique. Nullam molestie consequat lorem, ut sollicitudin odio viverra ut. Duis consectetur malesuada odio, a venenatis nulla varius nec. Donec interdum ante non velit semper ultrices. Nunc dui risus, euismod in pulvinar et, porttitor consectetur sem. Nam imperdiet diam rhoncus augue elementum sit amet vehicula nibh euismod. Morbi pretium est et tellus varius imperdiet. Nunc adipiscing interdum mollis. Phasellus id urna odio, iaculis vestibulum tortor. Integer pharetra sem sit amet erat posuere tincidunt quis id nulla. Aliquam feugiat lectus iaculis lorem blandit dapibus. Ut vel leo quis sem porta vestibulum. </p></div>
+			</div>
+			<div>
+				<h3><a href="#">Third</a></h3>
+				<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique sagittis volutpat. Quisque mauris erat, semper non dapibus id, ullamcorper eu nunc. Pellentesque quis elementum sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas mattis blandit ornare. In hac habitasse platea dictumst. Nullam sed tristique risus. Nulla facilisi. Sed gravida augue vel sem fringilla venenatis. Fusce a mattis eros. Sed sodales arcu vel mauris volutpat auctor. Morbi fermentum, enim a pellentesque vulputate, odio justo accumsan tellus, nec egestas diam diam id nibh. Duis eros metus, facilisis id tincidunt condimentum, elementum at elit. Mauris tincidunt ultricies turpis, in fermentum ante sollicitudin at. Aenean feugiat aliquam risus, at varius erat vehicula eget. Sed rhoncus congue pulvinar. Sed justo augue, cursus eu adipiscing lobortis, faucibus venenatis magna. Aliquam erat volutpat.</p>
+
+<p>Nunc lacinia, eros non rutrum volutpat, ligula arcu venenatis mi, at tempus urna dui eget augue. Suspendisse suscipit, nisi in sollicitudin viverra, lorem ligula tempus ante, sit amet ultrices leo turpis vitae nisl. Donec pretium sodales tristique. Nullam molestie consequat lorem, ut sollicitudin odio viverra ut. Duis consectetur malesuada odio, a venenatis nulla varius nec. Donec interdum ante non velit semper ultrices. Nunc dui risus, euismod in pulvinar et, porttitor consectetur sem. Nam imperdiet diam rhoncus augue elementum sit amet vehicula nibh euismod. Morbi pretium est et tellus varius imperdiet. Nunc adipiscing interdum mollis. Phasellus id urna odio, iaculis vestibulum tortor. Integer pharetra sem sit amet erat posuere tincidunt quis id nulla. Aliquam feugiat lectus iaculis lorem blandit dapibus. Ut vel leo quis sem porta vestibulum. </p></div>
+			</div>
+		</div>
+	
+		<!-- Tabs -->
+		<h2 class="demoHeaders">Tabs</h2>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">First</a></li>
+				<li><a href="#tabs-2">Second</a></li>
+				<li><a href="#tabs-3">Third</a></li>
+			</ul>
+			<div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+			<div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+			<div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+		</div>
+	
+		<!-- Dialog NOTE: Dialog is not generated by UI in this demo so it can be visually styled in themeroller-->
+		<h2 class="demoHeaders">Dialog</h2>
+		<p><a href="#" id="dialog_link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>Open Dialog</a></p>
+		
+		<!-- Datepicker -->
+		<h2 class="demoHeaders">Datepicker</h2>
+		<div id="datepicker"></div>
+	
+		<div id="dialog" title="Dialog Title"><p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>jQuery - Element Selectors</title>
+<link href="lib/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="lib/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("div#main").attr("id", "main2");
+});
+</script>
+</head>
+
+<body>
+<div id="main">
+	<div id="header">
+	<h1>jQuery Selectors</h1>
+	<hr />
+	</div>
+	<div id="content">
+	<div id="left">
+	  <p id="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tristique sagittis volutpat. Quisque mauris erat, semper non dapibus id, ullamcorper eu nunc. Pellentesque quis elementum sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas mattis blandit ornare. In hac habitasse platea dictumst. Nullam sed tristique risus. Nulla facilisi. Sed gravida augue vel sem fringilla venenatis. Fusce a mattis eros. Sed sodales arcu vel mauris volutpat auctor. Morbi fermentum, enim a pellentesque vulputate, odio justo accumsan tellus, nec egestas diam diam id nibh. Duis eros metus, facilisis id tincidunt condimentum, elementum at elit. Mauris tincidunt ultricies turpis, in fermentum ante sollicitudin at. Aenean feugiat aliquam risus, at varius erat vehicula eget. Sed rhoncus congue pulvinar. Sed justo augue, cursus eu adipiscing lobortis, faucibus venenatis magna. Aliquam erat volutpat.</p>
+	  <ol>
+        <li>Mauris tincidunt ultricies turpis</li>
+	    <li>in fermentum ante sollicitudin</li>
+	    <li>Morbi jQfermentum</li>
+	    <li>enim a pellentesque vulputate</li>
+	    <li>odio justo accumsan telljQus</li>
+	    <li>enim a pellentesque vulputat</li>
+      </ol>
+	  <p>Nunc lacinia, eros non rutrum volutpat, ligula arcu venenatis mi, at tempus urna dui eget augue. Suspendisse suscipit, nisi in sollicitudin viverra, lorem ligula tempus ante, sit amet ultrices leo turpis vitae nisl. Donec pretium sodales tristique. Nullam molestie consequat lorem, ut sollicitudin odio viverra ut. Duis consectetur malesuada odio, <a href="#">a venenatis nulla varius nec</a>. Donec interdum ante non velit semper ultrices. Nunc dui risus, euismod in pulvinar et, porttitor consectetur sem. Nam imperdiet diam rhoncus augue elementum sit amet vehicula nibh euismod. Morbi pretium est et tellus varius imperdiet. Nunc adipiscing interdum mollis. Phasellus id urna odio, iaculis vestibulum tortor. Integer pharetra sem sit amet erat posuere tincidunt quis id nulla. Aliquam feugiat lectus iaculis lorem blandit dapibus. Ut vel leo quis sem porta vestibulum.</p>
+  </div><!-- end left -->
+  <div id="right">
+    <div><label><input name="selectp" type="submit" id="selectp" value="Select &lt;P&gt;" /></label></div>
+    <div><label><input name="selecta" type="submit" id="selecta" value="Select &lt;a&gt;" /></label></div>
+    <div><label><input name="selectid" type="submit" id="selectid" value="Select &lt;p id=intro&gt;" /></label></div>
+    <div><label><input name="selectfirstli" type="submit" id="selectfirstli" value="Select &lt;li:first&gt;" /></label></div>
+    <div><label><input name="selectcontains" type="submit" id="selectcontains" value="Select &lt;li&gt; containing jQ" /></label></div>
+  </div>
+  <br clear="all" />
+  </div>
+  
+</div>
+</body>
+</html>

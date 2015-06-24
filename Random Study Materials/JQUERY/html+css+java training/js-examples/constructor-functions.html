@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Constructor Functions</title>
+<script type="text/javascript">
+function book(title, author) {
+	this.title = title; 
+	this.author  = author;
+	this.getDetails = function(){
+		return this.title + " is authored by " + this.author;
+	}
+}
+// create an object instance of book()
+var myBook = new book("JS Code Conventions", "Crockford");
+document.write(myBook.getDetails());
+
+// using the constructor property to create object
+var myBook2 = new book.constructor('Rev2020', 'Bhagat');
+
+var myBook = new book("JS Code Conventions", "Crockford");
+console.log(myBook instanceof book);
+// returns true
+
+
+</script>
+</head>
+
+<body>
+</body>
+</html>

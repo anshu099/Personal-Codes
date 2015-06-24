@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>jQuery AJAX JSON Demo</title>
+<link href="../lib/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="../lib/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.getJSON('employee_details.php', function(ed){
+		for(var i=0; i<ed.length; i++){
+			var row = '<tr><td>'+ ed[i].name +'</td><td>'+ ed[i].age +'</td><td>'+ ed[i].city +'</td><td>'+ ed[i].state +'</td></tr>';
+			$("#employee_details").append(row);
+//			$("#employee_details").append('<tr><td>'+ ed[i].name +'<td>'+ ed[i].age +'<td>'+ ed[i].city +'<td>'+ ed[i].state);
+		} // for
+	}); // getJSON
+	
+});
+</script>
+</head>
+
+<body>
+<div id="main">
+<h1>jQuery AJAX JSON Demo</h1>
+<hr />
+
+<form id="form1" name="form1" method="post" action="" onsubmit="return false">
+  <table width="70%" align="center" cellpadding="4" cellspacing="0" id="employee_details" border="1" style="border:1px solid #ccc;">
+    <tr>
+      <th>Name</th>
+      <th><label>Age</label></th>
+      <th>City</th>
+      <th>State</th>
+    </tr>
+  </table>
+  <input name="emp_data" type="hidden" id="emp_data" />
+</form>
+</div>
+</body>
+</html>

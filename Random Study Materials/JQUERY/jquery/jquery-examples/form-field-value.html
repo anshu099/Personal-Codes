@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>jQuery - Methods</title>
+<link href="lib/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="lib/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#submit").click(function(){
+		var name = $("#name").val();
+		alert(name);
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="main">
+	<div id="header">
+	<h1>jQuery - .val() </h1>
+	<hr />
+	</div>
+	<div id="content">
+	<div id="left">
+	  <div align="center"><form id="form1" name="form1" method="post" action="">
+	  <p>&nbsp;</p>
+	    Name: 
+	    <label>
+	    <input name="name" type="text" id="name" />
+	    </label>
+            <label>
+            <input name="submit" type="submit" id="submit" value="Get my name" />
+            </label>
+	  </form></div>
+	  <p>&nbsp;</p>
+	  </div>
+	<!-- end left -->
+  <div id="right">
+    <!--<div><label><input name="selectp" type="submit" id="selectp" value="Select &lt;P&gt;" /></label></div>
+    <div><label><input name="selecta" type="submit" id="selecta" value="Select &lt;a&gt;" /></label></div>
+    <div><label><input name="selectid" type="submit" id="selectid" value="Select &lt;p id=intro&gt;" /></label></div>
+    <div><label><input name="selectfirstli" type="submit" id="selectfirstli" value="Select &lt;li:first&gt;" /></label></div>
+    <div><label><input name="selectcontains" type="submit" id="selectcontains" value="Select &lt;li&gt; containing jQ" /></label></div>-->
+  </div>
+  <br clear="all" />
+  </div>
+  
+</div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>jQuery - Events</title>
+<link href="lib/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="lib/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("p").mouseover(function(){
+		$(this).css("background-color","#ff9");
+	});	
+	$("p").mouseout(function(){
+		$(this).css("background-color","#fff");
+	});
+	$("li").mouseover(function(){
+		$(this).css("text-decoration","underline");
+	});
+	$("li").mouseout(function(){
+		$(this).css("text-decoration","none");
+	});
+	$("a").click(function(){
+		alert("You just clicked.");
+		$(this).preventDefault;
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="main">
+	<div id="header">
+	<h1>jQuery Events</h1>
+	<hr />
+	</div>
+	<div id="content">
+	<div id="left">
+	  <p id="intro"><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Etiam tristique sagittis volutpat. Quisque mauris erat, semper non dapibus id, ullamcorper eu nunc. Pellentesque quis elementum sapien. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas mattis blandit ornare. In hac habitasse platea dictumst. Nullam sed tristique risus. Nulla facilisi. Sed gravida augue vel sem fringilla venenatis. Fusce a mattis eros. Sed sodales arcu vel mauris volutpat auctor. Morbi fermentum, enim a pellentesque vulputate, odio justo accumsan tellus, nec egestas diam diam id nibh. Duis eros metus, facilisis id tincidunt condimentum, elementum at elit. Mauris tincidunt ultricies turpis, in fermentum ante sollicitudin at. Aenean feugiat aliquam risus, at varius erat vehicula eget. Sed rhoncus congue pulvinar. Sed justo augue, cursus eu adipiscing lobortis, faucibus venenatis magna. Aliquam erat volutpat.</p>
+	  <ul>
+        <li>Mauris tincidunt ultricies turpis</li>
+	    <li>in fermentum ante sollicitudin</li>
+	    <li>Morbi jQfermentum</li>
+	    <li>enim a pellentesque vulputate</li>
+	    <li>odio justo accumsan telljQus</li>
+	    <li>enim a pellentesque vulputat</li>
+      </ul>
+	  <p>Nunc lacinia, eros non rutrum volutpat, ligula arcu venenatis mi, at tempus urna dui eget augue. Suspendisse suscipit, nisi in sollicitudin viverra, lorem ligula tempus ante, sit amet ultrices leo turpis vitae nisl. Donec pretium sodales tristique. Nullam molestie consequat lorem, ut sollicitudin odio viverra ut. Duis consectetur malesuada odio, <a href="#">a venenatis nulla varius nec</a>. Donec interdum ante non velit semper ultrices. Nunc dui risus, euismod in pulvinar et, porttitor consectetur sem. Nam imperdiet diam rhoncus augue elementum sit amet vehicula nibh euismod. Morbi pretium est et tellus varius imperdiet. Nunc adipiscing interdum mollis. Phasellus id urna odio, iaculis vestibulum tortor. Integer pharetra sem sit amet erat posuere tincidunt quis id nulla. Aliquam feugiat lectus iaculis lorem blandit dapibus. Ut vel leo quis sem porta vestibulum.</p>
+  </div><!-- end left -->
+  <div id="right">
+    <!--<div><label><input name="gethtml" type="submit" id="gethtml" value="Get #intro HTML" />
+    </label></div>
+    <div><label><input name="sethtml" type="submit" id="sethtml" value="Set HTML" /></label></div>
+    <div><label><input name="append" type="submit" id="append" value=".append()" />
+    </label></div>
+    <div><label><input name="before" type="submit" id="before" value=".before()" />
+    </label></div>
+    <div><label><input name="replacewith" type="submit" id="replacewith" value=".replaceWith()" />
+    </label></div>
+    <div><label><input name="empty" type="submit" id="empty" value=".empty()" />
+    </label></div>
+    <div><label><input name="remove" type="submit" id="remove" value=".remove()" />
+    </label></div>-->
+  </div>
+  <br clear="all" />
+  </div>
+  
+</div>
+</body>
+</html>

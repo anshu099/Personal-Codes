@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>jQuery - XML Parsing</title>
+<link href="lib/style.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="lib/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$.ajax({
+		type: "GET",
+		url: "xml-demo/jquery_xml.xml",
+		dataType: "xml",
+		success: parseXml
+	  });
+});
+
+function parseXml(xml)
+{
+  //find every Manufacturer and print the name, followed by the first Model
+  $(xml).find("Manufacturer").each(function()
+  {
+    $("#output").append($(this).attr("name") + "<br />");
+	$(this).find("Model:first").each(function(){
+		$("#output").append(":- " + $(this).text() + "<br />");
+	});
+  });
+}
+</script>
+</head>
+
+<body>
+<div id="output"></div>
+</body>
+</html>

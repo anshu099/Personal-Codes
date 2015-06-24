@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Date Picker</title>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  
+  <script>
+$(document).ready(function() {
+$("#datepicker").datepicker({
+defaultDate: +7,		// sets default date. +7 is 7 days hence
+dateFormat: 'yy-mm-dd',	// sets date format. Default is mm-dd-yy
+firstDay: 1,			// sets first day of week. Sunday is 0
+minDate: new Date(2010, 0, 1), // sets minimum selectable date
+minDate: '-1m',			// can be set as new Date() or range. 'm' for month, 'y' for year, 'w' for week
+maxDate: '+1y',			// sets maximum selectable date
+showButtonPanel: true,	// enables the Today & Done buttons panel
+changeMonth: true,		// adds a drop down list with Months
+changeYear: true,		// adds a drop down list with Years
+showWeek: true,			// enables week numbers
+numberOfMonths: 3,		// enables multiple months
+});
+
+$("#datepicker").change(function(){
+	alert($("#datepicker").val());
+});
+});
+</script>
+</head>
+<body style="font-size:62.5%;">
+  
+<input type="text" id="datepicker" />
+
+</body>
+</html>

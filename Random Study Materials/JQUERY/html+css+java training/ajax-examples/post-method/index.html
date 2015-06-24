@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>ajax</title>
+<style type="text/css">
+body {font-family: Trebuchet MS}
+#response {padding: 5px; border: 1px solid #ccc; background-color:#eee;}
+</style>
+<script type="text/javascript" src="xmlobj.js"></script>
+<script type="text/javascript">
+function AjaxFunction() {
+	var f1 = document.getElementById("f1").value;
+	var f2 = document.getElementById("f2").value;
+	var params = "f1=" + f1 + "&f2=" + f2;
+
+	var xmlHttp = new GetXmlHttpObject();
+	xmlHttp.open("POST", "response.asp", true);
+	xmlHttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xmlHttp.setRequestHeader("Content-length", params.length);
+	xmlHttp.setRequestHeader("Connection", "close");
+	xmlHttp.send(params);
+
+	xmlHttp.onreadystatechange = function() {
+		if(xmlHttp.readyState == 4) {
+			document.getElementById("response").innerHTML = xmlHttp.responseText;
+		}
+	}
+	
+}
+</script>
+</head>
+
+<body>
+<form>
+<div>Name: <input type="text" id="f1" />
+Age: <input type="text" id="f2" /></div>
+<div id="response">Your inputs will be displayed here.</div>
+<button onclick="AjaxFunction()">Submit</button>
+</form>
+</body>
+</html>

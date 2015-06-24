@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>jQuery - Flot</title>
+<script type="text/javascript" src="jquery-1.7.1.js"></script>
+<!--[if lte IE8]>
+<script type="text/javascript" src="flot/excanvas.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="flot/jquery.flot.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var series1 = [[1, 100], [2, 213], [3, 121], [4, 256]];
+var series2 = [[1, 170], [2, 102], [3, 201], [4, 206]];
+var data = [series1, series2];
+
+// go plot
+$.plot($("#placeholder"), data);
+});
+</script>
+</head>
+
+<body>
+<div id="main">
+<div id="placeholder" style="width:500px; height:300px;"></div>
+</div>
+</body>
+</html>

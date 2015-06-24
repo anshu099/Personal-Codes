@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Date Range</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script>
+$(function() {
+var dates = $( "#from, #to" ).datepicker({
+defaultDate: "+1w",
+changeMonth: true,
+numberOfMonths: 3,
+onSelect: function( selectedDate ) {
+var option = this.id == "from" ? "minDate" : "maxDate",
+instance = $( this ).data( "datepicker" );
+date = $.datepicker.parseDate(
+instance.settings.dateFormat ||
+$.datepicker._defaults.dateFormat,
+selectedDate, instance.settings );
+dates.not( this ).datepicker( "option", option, date );
+}
+});
+});
+</script>
+</head>
+<body>
+<div class="demo">
+
+<label for="from">From</label>
+<input type="text" id="from" name="from"/>
+<label for="to">to</label>
+<input type="text" id="to" name="to"/>
+
+</div><!-- End demo -->
+</body>
+</html>

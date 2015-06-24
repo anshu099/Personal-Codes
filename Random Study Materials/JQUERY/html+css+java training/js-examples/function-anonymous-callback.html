@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Function Literal Notation</title>
+<script type="text/javascript">
+function invoke_and_add(a, b){
+	return a() + b();
+}
+
+function one() { return 1; }
+function two() { return 2; }
+
+// pass functions as params
+invoke_and_add(one, two); // 3
+document.write(invoke_and_add(one, two)); // 3
+// pass anonymous functions as params
+// same as above
+invoke_and_add(function(){return 1;}, function(){return 2;});
+var acf = invoke_and_add(function(){return 1;}, function(){return 2;});
+document.write(acf);
+</script>
+</head>
+
+<body>
+</body>
+</html>
